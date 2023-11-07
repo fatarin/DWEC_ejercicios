@@ -19,6 +19,7 @@ let prototipo = {
             
             hijos.push(hijo2);
 
+        delete objeto.nombre;
         delete objeto.peso;
         delete objeto.tipo;
         delete objeto.divisible;
@@ -36,10 +37,15 @@ let celula = {
 
 Object.setPrototypeOf(celula, prototipo);
 
-console.log("celula peso: " + celula.peso);
+//comprobaciones
+console.log("celula que realiza mitosis: " + celula.nombre);
 let hijo = celula.mitosis(celula);
-console.log(hijo);
-console.log("celula: " + celula.tipo);
+console.log(hijo);                        //mitosis celula madre
+console.log("celula: " + celula.nombre); //comprobar que celula ya no tiene atributos
+console.log("celula que realiza mitosis:: " + hijo[0].nombre);  
+let nietos = hijo[0].mitosis(hijo[0]);   //mitosis uno de los hijos
+console.log(nietos);    
+console.log("celula: " + hijo[0].nom); //comprobar que hijo ya no tiene atributos
 
 
 
