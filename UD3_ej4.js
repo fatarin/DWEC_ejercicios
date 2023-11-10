@@ -31,10 +31,7 @@ class Poligono{
                 coordenadas.add(puntos[element].y);
             }
             valido = coordenadas.size;
-            //si las coordenadas varían más de 3 valores no puede ser cuadrado/rectangulo
-            /* if(coordenadas.size == 2){valido = "cuadrado";}
-                else if(coordenadas.size == 4){valido = "rectangulo"}
-                    else valido = null; */
+            
               
         }
         return valido;
